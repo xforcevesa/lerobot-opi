@@ -295,6 +295,9 @@ class OpenCVCamera:
         if requested_color_mode == "rgb":
             color_image = cv2.cvtColor(color_image, cv2.COLOR_BGR2RGB)
 
+        # cv2.imshow('Frame', color_image)
+        # cv2.waitKey(1)
+
         h, w, _ = color_image.shape
         if h != self.height or w != self.width:
             raise OSError(
